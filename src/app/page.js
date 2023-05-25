@@ -17,21 +17,7 @@ const fetcher = async (url) => {
 export default function Home() {
 
 
-  const api = async () => {
  
-      const res = await fetch("/api/",
-          {
-              method: 'GET',
-              headers: {
-                  'X-RapidAPI-Key': 'your-rapidapi-key',
-                  'X-RapidAPI-Host': 'famous-quotes4.p.rapidapi.com',
-              },
-          }
-      );
-      const data = await res.json();
-      console.log([data]);
-  
-  };
 
   const { data, error, isLoading } = useSWR(
     "/api/",
